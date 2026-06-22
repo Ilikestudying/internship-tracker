@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fb;
+}
+
+.app {
+  padding: 30px;
+}
+
+.title {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.dashboard {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 150px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: white;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.button {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  background-color: #facc15;
+}
+
+.save-button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  background-color: #22c55e;
+  color: white;
+}
+
+.cancel-button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.delete-button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #ef4444;
+  color: white;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.table td {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.search-input {
+  width: 300px;
+}
+
+.applied {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.interview {
+  background-color: #ede9fe;
+  color: #6d28d9;
+}
+
+.offer {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.rejected {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+.dark {
+  background-color: #111827;
+  color: white;
+  min-height: 100vh;
+}
+
+.dark .card,
+.dark .section {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.dark .input {
+  background-color: #374151;
+  color: white;
+  border-color: #4b5563;
+}
+
+.dark .table td,
+.dark .table th {
+  border-color: #374151;
+}
+
+.dark .subtitle {
+  color: #d1d5db;
+}
