@@ -140,6 +140,7 @@ function App() {
     (item) => item.status === "Rejected"
   ).length;
   const offer = internships.filter((item) => item.status === "Offer").length;
+  
 
   const filteredInternships = internships
     .filter((internship) => {
@@ -391,7 +392,7 @@ function App() {
 
       <footer className="footer">
         <p>
-          Created by Pushkar •{" "}
+          Created by Maruthi Vadlamani •{" "}
           <a
             href="https://github.com/Ilikestudying/internship-tracker"
             target="_blank"
