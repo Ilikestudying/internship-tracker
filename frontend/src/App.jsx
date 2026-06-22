@@ -8,6 +8,7 @@ function App() {
   const [company, setCompany] = useState("");
   const [role, setRole] = useState("");
   const [status, setStatus] = useState("Applied");
+  const [dateApplied, setDateApplied] = useState("");
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState("All");
   const [sortBy, setSortBy] = useState("Newest");
@@ -36,13 +37,19 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ company, role, status }),
+      body: JSON.stringify({
+        company,
+        role,
+        status,
+        date_applied: dateApplied || null,
+      }),
     })
       .then((response) => response.json())
       .then(() => {
         setCompany("");
         setRole("");
         setStatus("Applied");
+        setDateApplied("");
         fetchInternships();
       })
       .catch((error) => console.error(error));
@@ -73,6 +80,7 @@ function App() {
         company: internship.company,
         role: internship.role,
         status: newStatus,
+        date_applied: internship.date_applied,
       }),
     })
       .then((response) => response.json())
@@ -102,6 +110,7 @@ function App() {
         company: editCompany,
         role: editRole,
         status: internship.status,
+        date_applied: internship.date_applied,
       }),
     })
       .then((response) => response.json())
@@ -208,6 +217,13 @@ function App() {
             onChange={(event) => setRole(event.target.value)}
           />
 
+          <input
+            className="input"
+            type="date"
+            value={dateApplied}
+            onChange={(event) => setDateApplied(event.target.value)}
+          />
+
           <select
             className="input"
             value={status}
@@ -272,6 +288,7 @@ function App() {
                 <th>ID</th>
                 <th>Company</th>
                 <th>Role</th>
+                <th>Date Applied</th>
                 <th>Status</th>
                 <th>Update Status</th>
                 <th>Actions</th>
@@ -306,6 +323,8 @@ function App() {
                       internship.role
                     )}
                   </td>
+
+                  <td>{internship.date_applied || "-"}</td>
 
                   <td>
                     <span className={getStatusBadgeClass(internship.status)}>
@@ -369,9 +388,10 @@ function App() {
           </table>
         )}
       </div>
+
       <footer className="footer">
         <p>
-          Created by Pushkar •
+          Created by Pushkar •{" "}
           <a
             href="https://github.com/Ilikestudying/internship-tracker"
             target="_blank"

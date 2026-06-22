@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Date
 from database import Base
 
 
@@ -9,3 +9,4 @@ class InternshipDB(Base):
     company = Column(String, nullable=False)
     role = Column(String, nullable=False)
     status = Column(String, nullable=False)
+    date_applied = Column(Date, nullable=True)
