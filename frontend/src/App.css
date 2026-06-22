@@ -191,3 +191,41 @@ body {
 .dark .footer {
   border-top: 1px solid #374151;
 }
+
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .search-input,
+  .input,
+  .button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .section {
+    overflow-x: auto;
+  }
+}
