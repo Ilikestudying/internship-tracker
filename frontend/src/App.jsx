@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
+const API_URL = "https://internship-tracker-production-d24d.up.railway.app";
+
 function App() {
   const [internships, setInternships] = useState([]);
   const [company, setCompany] = useState("");
@@ -16,7 +18,7 @@ function App() {
   const [editRole, setEditRole] = useState("");
 
   function fetchInternships() {
-    fetch("http://127.0.0.1:8000/internships")
+    fetch(`${API_URL}/internships`)
       .then((response) => response.json())
       .then((data) => setInternships(data))
       .catch((error) => console.error(error));
@@ -29,7 +31,7 @@ function App() {
   function addInternship(event) {
     event.preventDefault();
 
-    fetch("http://127.0.0.1:8000/internships", {
+    fetch(`${API_URL}/internships`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +55,7 @@ function App() {
 
     if (!confirmed) return;
 
-    fetch(`http://127.0.0.1:8000/internships/${id}`, {
+    fetch(`${API_URL}/internships/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
@@ -62,7 +64,7 @@ function App() {
   }
 
   function updateStatus(internship, newStatus) {
-    fetch(`http://127.0.0.1:8000/internships/${internship.id}`, {
+    fetch(`${API_URL}/internships/${internship.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -91,7 +93,7 @@ function App() {
   }
 
   function saveEdit(internship) {
-    fetch(`http://127.0.0.1:8000/internships/${internship.id}`, {
+    fetch(`${API_URL}/internships/${internship.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
