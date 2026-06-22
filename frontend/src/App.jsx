@@ -369,6 +369,18 @@ function App() {
           </table>
         )}
       </div>
+      <footer className="footer">
+        <p>
+          Created by Pushkar •
+          <a
+            href="https://github.com/Ilikestudying/internship-tracker"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub Repository
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }

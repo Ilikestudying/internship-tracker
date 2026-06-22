@@ -175,3 +175,19 @@ body {
 .dark .subtitle {
   color: #d1d5db;
 }
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer a {
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.dark .footer {
+  border-top: 1px solid #374151;
+}
